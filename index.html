@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Oluwaseyi Omisore – AI × Healthcare Research</title>
+  <title>Oluwaseyi Omisore – AI × Healthcare</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
@@ -16,7 +16,6 @@
 </head>
 
 <body>
-  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="logo">
@@ -28,15 +27,17 @@
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+        ☾
+      </button>
     </div>
   </header>
 
   <main id="top">
-
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero fade-in">
       <div class="container hero-inner">
-        <div>
+        <div class="hero-text-block">
           <p class="eyebrow">Computer Science · AI × Healthcare</p>
           <h1>Hi, I’m Oluwaseyi Omisore.</h1>
           <p class="hero-text">
@@ -47,11 +48,16 @@
             <a href="#projects" class="btn-secondary">See projects</a>
           </div>
         </div>
+        <div class="hero-photo-wrapper">
+          <div class="hero-photo-frame">
+            <img src="profile.jpg" alt="Portrait of Oluwaseyi Omisore" class="hero-photo" />
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="section">
+    <section id="about" class="section fade-in">
       <div class="container section-inner">
         <div class="section-header">
           <h2>About</h2>
@@ -94,7 +100,7 @@
     </section>
 
     <!-- RESEARCH -->
-    <section id="research" class="section section-alt">
+    <section id="research" class="section section-alt fade-in">
       <div class="container section-inner">
         <div class="section-header">
           <h2>Research</h2>
@@ -104,7 +110,6 @@
         </div>
 
         <div class="cards">
-
           <article class="card">
             <p class="card-label">Research Project</p>
             <h3>Hallucination Detection with Fine‑Tuned Language Models</h3>
@@ -131,13 +136,12 @@
               Analyzed EEG datasets as part of a professor‑guided project. Cleaned and processed raw brain‑signal data, visualized patterns, and explored challenges in biomedical signal interpretation. This experience strengthened my analytical skills and exposed me to the complexity of real‑world healthcare data.
             </p>
           </article>
-
         </div>
       </div>
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" class="section">
+    <section id="projects" class="section fade-in">
       <div class="container section-inner">
         <div class="section-header">
           <h2>Projects</h2>
@@ -147,7 +151,6 @@
         </div>
 
         <div class="cards">
-
           <article class="card">
             <p class="card-label">Project</p>
             <h3>Hallucination Detection with LoRA‑Fine‑Tuned GPT‑2</h3>
@@ -177,13 +180,12 @@
               Processed and visualized EEG signals to identify patterns and understand noise, artifacts, and signal structure. Gained experience with biomedical data and exploratory analysis techniques.
             </p>
           </article>
-
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section section-alt">
+    <section id="contact" class="section section-alt fade-in">
       <div class="container section-inner">
         <div class="section-header">
           <h2>Contact</h2>
@@ -204,10 +206,8 @@
         </div>
       </div>
     </section>
-
   </main>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© <span id="year"></span> Oluwaseyi Omisore. Built with HTML &amp; CSS.</p>
@@ -215,8 +215,41 @@
   </footer>
 
   <script>
+    // Year
     document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 
+    // Theme toggle
+    const toggle = document.getElementById("theme-toggle");
+    const body = document.body;
+    const storedTheme = localStorage.getItem("theme");
+
+    if (storedTheme === "dark") {
+      body.classList.add("dark-mode");
+      toggle.textContent = "☀";
+    }
+
+    toggle.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      const isDark = body.classList.contains("dark-mode");
+      toggle.textContent = isDark ? "☀" : "☾";
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
+
+    // Fade-in on scroll
+    const faders = document.querySelectorAll(".fade-in");
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    faders.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>

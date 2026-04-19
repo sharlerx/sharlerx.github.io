@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Oluwaseyi – Computer Science & Research</title>
+  <title>Oluwaseyi Omisore – AI × Healthcare Research</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="Personal website of Oluwaseyi, a computer science major interested in research."
+    content="Personal website of Oluwaseyi Omisore, a computer science student exploring machine learning, AI, and healthcare applications."
   />
   <link rel="stylesheet" href="style.css" />
   <link
@@ -14,11 +14,13 @@
     rel="stylesheet"
   />
 </head>
+
 <body>
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="logo">
-        <a href="#top">Oluwaseyi</a>
+        <a href="#top">Oluwaseyi Omisore</a>
       </div>
       <nav class="nav">
         <a href="#about">About</a>
@@ -30,16 +32,15 @@
   </header>
 
   <main id="top">
-    <!-- Hero / Intro -->
+
+    <!-- HERO -->
     <section class="hero">
       <div class="container hero-inner">
         <div>
-          <p class="eyebrow">Computer Science · Research</p>
-          <h1>Hi, I’m Oluwaseyi.</h1>
+          <p class="eyebrow">Computer Science · AI × Healthcare</p>
+          <h1>Hi, I’m Oluwaseyi Omisore.</h1>
           <p class="hero-text">
-            I’m a computer science major interested in research at the intersection of
-            <span class="highlight">[your areas: e.g., machine learning, systems, HCI]</span>.
-            I enjoy turning ideas into experiments, and experiments into insights.
+            I’m a computer science student at the University of Massachusetts Boston, focusing on machine learning and artificial intelligence. I’m especially interested in applying AI to healthcare challenges like rare disease detection, and in building models that are interpretable, reliable, and actually useful in real clinical settings. I’m working toward a future in research, with plans to pursue a PhD and contribute to AI systems that make a real impact in people’s lives.
           </p>
           <div class="hero-links">
             <a href="#research" class="btn-primary">View research</a>
@@ -49,147 +50,139 @@
       </div>
     </section>
 
-    <!-- About -->
+    <!-- ABOUT -->
     <section id="about" class="section">
       <div class="container section-inner">
         <div class="section-header">
           <h2>About</h2>
         </div>
+
         <div class="section-content two-column">
           <div>
             <p>
-              I’m an undergraduate computer science student with a strong interest in
-              research. I’m particularly drawn to
-              <span class="highlight">[your subfields]</span>, where I like exploring
-              how theory and practice meet.
+              I’m an undergraduate computer science major at the University of Massachusetts Boston with a growing interest in machine learning, artificial intelligence, and their applications in healthcare. I’m drawn to problems where data is limited, uncertainty is high, and model reliability truly matters — especially rare disease detection and clinical decision support.
             </p>
             <p>
-              Recently, I’ve been focusing on
-              <span class="highlight">[e.g., building prototypes, reading papers, contributing to open-source]</span>.
-              Long term, I’m interested in pursuing
-              <span class="highlight">[e.g., graduate school, research roles in industry, etc.]</span>.
+              My recent work includes fine‑tuning language models to detect hallucinations, benchmarking LLM diagnostic accuracy across disease rarity tiers, and analyzing EEG datasets to understand real‑world biomedical signals. I’m also interested in trustworthy AI, particularly how we can design systems that clinicians and patients can understand and rely on.
+            </p>
+            <p>
+              Long‑term, I plan to pursue a PhD and continue working on research‑driven projects and internships that bridge AI theory with meaningful healthcare applications.
             </p>
           </div>
+
           <div>
             <p class="label">Interests</p>
             <ul class="tag-list">
               <li>Machine Learning</li>
-              <li>Systems</li>
-              <li>Algorithms</li>
-              <li>Human–Computer Interaction</li>
+              <li>Artificial Intelligence</li>
+              <li>Interpretable & Reliable AI</li>
+              <li>Healthcare Applications</li>
+              <li>Rare Disease Detection</li>
+              <li>Biomedical Data Analysis</li>
             </ul>
 
             <p class="label">Currently</p>
             <ul class="bullet-list">
-              <li>Studying computer science at [Your University].</li>
-              <li>Working on [course / independent / lab] projects.</li>
-              <li>Looking for research opportunities and collaborations.</li>
+              <li>Studying computer science at UMass Boston.</li>
+              <li>Exploring ML applications in healthcare.</li>
+              <li>Benchmarking LLM diagnostic behavior.</li>
+              <li>Preparing for future research roles and PhD studies.</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Research -->
+    <!-- RESEARCH -->
     <section id="research" class="section section-alt">
       <div class="container section-inner">
         <div class="section-header">
           <h2>Research</h2>
           <p class="section-subtitle">
-            A snapshot of projects and directions I’m exploring.
+            A snapshot of the work and directions I’m exploring.
           </p>
         </div>
+
         <div class="cards">
+
           <article class="card">
             <p class="card-label">Research Project</p>
-            <h3>Title of Research Project</h3>
-            <p class="card-meta">[Your University] · [Year]</p>
+            <h3>Hallucination Detection with Fine‑Tuned Language Models</h3>
+            <p class="card-meta">PyTorch · HuggingFace · LoRA · GPT‑2</p>
             <p>
-              Short abstract of what you’re studying. Focus on the problem, your
-              approach, and why it matters in 3–4 sentences.
-            </p>
-            <p class="card-links">
-              <a href="#" target="_blank">Paper / Draft</a>
-              <span>·</span>
-              <a href="#" target="_blank">Code</a>
+              Fine‑tuned a GPT‑2‑based sequence classification model using LoRA to detect hallucinated vs. factual responses in dialogue data. Built a binary dataset from the HaluEval benchmark, trained the model using the HuggingFace Trainer, and evaluated improvements over the base model. This project strengthened my understanding of model reliability and PEFT methods for efficient fine‑tuning.
             </p>
           </article>
 
           <article class="card">
             <p class="card-label">Research Direction</p>
-            <h3>Area you’re exploring</h3>
-            <p class="card-meta">Ongoing</p>
+            <h3>LLM Benchmarking for Rare Disease Diagnosis</h3>
+            <p class="card-meta">GPT‑4o · GitHub Models · AI × Healthcare</p>
             <p>
-              Briefly describe a direction you’re curious about—e.g., “Understanding
-              how model interpretability affects user trust in AI systems.”
+              Designed an evaluation framework to test whether LLM diagnostic accuracy changes across disease rarity tiers. This work explores how LLMs reason about rare conditions, where data scarcity and clinical ambiguity make diagnosis challenging. The goal is to understand model limitations and identify opportunities for safer, more reliable AI‑assisted clinical reasoning.
             </p>
           </article>
 
           <article class="card">
-            <p class="card-label">Reading</p>
-            <h3>Recent papers I’m thinking about</h3>
-            <ul class="paper-list">
-              <li><span class="paper-title">Paper Title 1</span> – Author et al.</li>
-              <li><span class="paper-title">Paper Title 2</span> – Author et al.</li>
-              <li><span class="paper-title">Paper Title 3</span> – Author et al.</li>
-            </ul>
+            <p class="card-label">Research Project</p>
+            <h3>EEG Data Analysis</h3>
+            <p class="card-meta">Python · Data Visualization</p>
+            <p>
+              Analyzed EEG datasets as part of a professor‑guided project. Cleaned and processed raw brain‑signal data, visualized patterns, and explored challenges in biomedical signal interpretation. This experience strengthened my analytical skills and exposed me to the complexity of real‑world healthcare data.
+            </p>
           </article>
+
         </div>
       </div>
     </section>
 
-    <!-- Projects -->
+    <!-- PROJECTS -->
     <section id="projects" class="section">
       <div class="container section-inner">
         <div class="section-header">
           <h2>Projects</h2>
           <p class="section-subtitle">
-            Selected technical work that reflects how I think and build.
+            Selected work that reflects how I think and build.
           </p>
         </div>
+
         <div class="cards">
+
           <article class="card">
             <p class="card-label">Project</p>
-            <h3>Project Name</h3>
-            <p class="card-meta">Python · PyTorch · ML</p>
+            <h3>Hallucination Detection with LoRA‑Fine‑Tuned GPT‑2</h3>
+            <p class="card-meta">PyTorch · HuggingFace · LoRA · NLP</p>
             <p>
-              One–two sentence description of what the project does and what you
-              learned from it.
+              Built a hallucination‑detection classifier by fine‑tuning GPT‑2 using LoRA. Created a binary dataset from the HaluEval benchmark, trained the model using the HuggingFace Trainer, and evaluated improvements in accuracy over the base model.
             </p>
             <p class="card-links">
-              <a href="#" target="_blank">GitHub</a>
-              <span>·</span>
-              <a href="#" target="_blank">Demo</a>
+              <a href="https://github.com/sharlerx" target="_blank">GitHub</a>
             </p>
           </article>
 
           <article class="card">
             <p class="card-label">Project</p>
-            <h3>Another Project</h3>
-            <p class="card-meta">React · Node.js</p>
+            <h3>LLM Diagnostic Benchmarking for Rare Diseases</h3>
+            <p class="card-meta">GPT‑4o · GitHub Models</p>
             <p>
-              Focus on impact: who it helps, what problem it solves, or what you
-              experimented with.
-            </p>
-            <p class="card-links">
-              <a href="#" target="_blank">GitHub</a>
+              Evaluated whether LLM diagnostic accuracy varies across disease rarity tiers. This project highlights gaps in LLM clinical reasoning and explores how AI systems handle rare conditions.
             </p>
           </article>
 
           <article class="card">
-            <p class="card-label">Coursework</p>
-            <h3>Course / Assignment</h3>
-            <p class="card-meta">Algorithms · Systems</p>
+            <p class="card-label">Project</p>
+            <h3>EEG Data Analysis</h3>
+            <p class="card-meta">Python · Data Visualization</p>
             <p>
-              Briefly highlight a cool assignment or project from a class that shows
-              depth or rigor.
+              Processed and visualized EEG signals to identify patterns and understand noise, artifacts, and signal structure. Gained experience with biomedical data and exploratory analysis techniques.
             </p>
           </article>
+
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
+    <!-- CONTACT -->
     <section id="contact" class="section section-alt">
       <div class="container section-inner">
         <div class="section-header">
@@ -198,30 +191,32 @@
             Open to research opportunities, collaborations, and conversations.
           </p>
         </div>
+
         <div class="section-content">
           <p>
-            The best way to reach me is via email. I’m also active on GitHub and
-            LinkedIn.
+            The best way to reach me is via email. I’m also active on GitHub and LinkedIn.
           </p>
           <ul class="contact-list">
-            <li><span class="label">Email:</span> <a href="mailto:you@university.edu">you@university.edu</a></li>
-            <li><span class="label">GitHub:</span> <a href="https://github.com/yourusername" target="_blank">@yourusername</a></li>
-            <li><span class="label">LinkedIn:</span> <a href="https://www.linkedin.com/in/yourusername" target="_blank">/in/yourusername</a></li>
+            <li><span class="label">Email:</span> <a href="mailto:sharlerx1@gmail.com">sharlerx1@gmail.com</a></li>
+            <li><span class="label">GitHub:</span> <a href="https://github.com/sharlerx" target="_blank">@sharlerx</a></li>
+            <li><span class="label">LinkedIn:</span> <a href="https://www.linkedin.com/in/oluwaseyi-omisore-cs" target="_blank">/in/oluwaseyi-omisore-cs</a></li>
           </ul>
         </div>
       </div>
     </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> Oluwaseyi. Built with HTML &amp; CSS.</p>
+      <p>© <span id="year"></span> Oluwaseyi Omisore. Built with HTML &amp; CSS.</p>
     </div>
   </footer>
 
   <script>
-    // Set current year in footer
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>

@@ -1,0 +1,351 @@
+/* Base */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #f7f7f5;
+  --bg-alt: #ffffff;
+  --text: #111111;
+  --muted: #666666;
+  --accent: #1f4fff;
+  --border: #e0e0dd;
+  --card-bg: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text);
+  background-color: var(--bg);
+  line-height: 1.6;
+}
+
+/* Layout */
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(247, 247, 245, 0.96);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+}
+
+.logo a {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.nav a {
+  margin-left: 1.25rem;
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.nav a:hover {
+  color: var(--text);
+}
+
+/* Hero */
+
+.hero {
+  padding: 5rem 0 3rem;
+}
+
+.hero-inner {
+  max-width: 720px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.75rem;
+  margin: 0 0 1rem;
+}
+
+.hero-text {
+  font-size: 1.05rem;
+  color: var(--muted);
+  margin-bottom: 1.75rem;
+}
+
+.highlight {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--text);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: #000000;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.btn-secondary:hover {
+  border-color: var(--text);
+}
+
+/* Sections */
+
+.section {
+  padding: 3.5rem 0;
+  background-color: var(--bg);
+}
+
+.section-alt {
+  background-color: var(--bg-alt);
+}
+
+.section-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.section-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  margin: 0 0 0.25rem;
+}
+
+.section-subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.section-content {
+  font-size: 0.98rem;
+  color: var(--text);
+}
+
+/* Two-column layout */
+
+.two-column {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
+  gap: 2.5rem;
+}
+
+/* Lists & labels */
+
+.label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-bottom: 0.35rem;
+}
+
+.tag-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag-list li {
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  padding: 0.25rem 0.6rem;
+  font-size: 0.8rem;
+}
+
+.bullet-list {
+  padding-left: 1.1rem;
+  margin: 0;
+}
+
+.bullet-list li {
+  margin-bottom: 0.25rem;
+}
+
+/* Cards */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+  padding: 1.25rem 1.3rem;
+}
+
+.card-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+
+.card h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+}
+
+.card-meta {
+  margin: 0 0 0.75rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.card p {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+}
+
+.card-links {
+  font-size: 0.85rem;
+}
+
+.card-links a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.card-links a:hover {
+  text-decoration: underline;
+}
+
+/* Papers list */
+
+.paper-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.paper-list li {
+  margin-bottom: 0.35rem;
+}
+
+.paper-title {
+  font-weight: 500;
+}
+
+/* Contact */
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.contact-list li {
+  margin-bottom: 0.4rem;
+}
+
+.contact-list a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  background-color: var(--bg-alt);
+}
+
+.footer-inner {
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* Responsive */
+
+@media (max-width: 720px) {
+  .hero {
+    padding-top: 4rem;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .nav a {
+    margin-left: 0.9rem;
+    font-size: 0.85rem;
+  }
+}

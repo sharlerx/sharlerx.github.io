@@ -41,13 +41,17 @@
           <p class="eyebrow">Computer Science · AI × Healthcare</p>
           <h1>Hi, I’m Oluwaseyi Omisore.</h1>
           <p class="hero-text">
-            I’m a computer science student at the University of Massachusetts Boston, focusing on machine learning and artificial intelligence. I’m especially interested in applying AI to healthcare challenges like rare disease detection, and in building models that are interpretable, reliable, and actually useful in real clinical settings. I’m working toward a future in research, with plans to pursue a PhD and contribute to AI systems that make a real impact in people’s lives.
+            I’m a computer science student at the University of Massachusetts Boston, focusing on machine learning and artificial intelligence. 
+            I’m especially interested in applying AI to healthcare challenges like rare disease detection, where data is limited, and decisions carry real-world consequences.
+            I plan to pursue a PhD and contribute to research that develops AI systems with meaningful impact.
           </p>
+
           <div class="hero-links">
             <a href="#research" class="btn-primary">View research</a>
             <a href="#projects" class="btn-secondary">See projects</a>
           </div>
         </div>
+
         <div class="hero-photo-wrapper">
           <div class="hero-photo-frame">
             <img src="profile.jpg" alt="Portrait of Oluwaseyi Omisore" class="hero-photo" />
@@ -66,13 +70,13 @@
         <div class="section-content two-column">
           <div>
             <p>
-              I’m an undergraduate computer science major at the University of Massachusetts Boston with a growing interest in machine learning, artificial intelligence, and their applications in healthcare. I’m drawn to problems where data is limited, uncertainty is high, and model reliability truly matters — especially rare disease detection and clinical decision support.
+              I’m currently a sophomore studying computer science with a growing focus on AI for healthcare 
+              and clinical decision support. I’m drawn to problems where data is limited, uncertainty is high, and model reliability truly matters. 
+              I also care about developing AI systems that are ethical, transparent, and trustworthy so that both clinicians and patients can easily understand and trust them.
             </p>
+
             <p>
-              My recent work includes fine‑tuning language models to detect hallucinations, benchmarking LLM diagnostic accuracy across disease rarity tiers, and analyzing EEG datasets to understand real‑world biomedical signals. I’m also interested in trustworthy AI, particularly how we can design systems that clinicians and patients can understand and rely on.
-            </p>
-            <p>
-              Long‑term, I plan to pursue a PhD and continue working on research‑driven projects and internships that bridge AI theory with meaningful healthcare applications.
+              My recent work includes fine‑tuning the GPT-2 language model to detect hallucinations, benchmarking LLM diagnostic accuracy across disease rarity tiers, and analyzing EEG datasets to understand real‑world biomedical signals. 
             </p>
           </div>
 
@@ -91,8 +95,8 @@
             <ul class="bullet-list">
               <li>Studying computer science at UMass Boston.</li>
               <li>Exploring ML applications in healthcare.</li>
-              <li>Benchmarking LLM diagnostic behavior.</li>
-              <li>Preparing for future research roles and PhD studies.</li>
+              <li>Seeking internships and research opportunities.</li>
+              <li>Preparing for a career as a Computer and Information Research Scientist.</li>
             </ul>
           </div>
         </div>
@@ -115,7 +119,8 @@
             <h3>Hallucination Detection with Fine‑Tuned Language Models</h3>
             <p class="card-meta">PyTorch · HuggingFace · LoRA · GPT‑2</p>
             <p>
-              Fine‑tuned a GPT‑2‑based sequence classification model using LoRA to detect hallucinated vs. factual responses in dialogue data. Built a binary dataset from the HaluEval benchmark, trained the model using the HuggingFace Trainer, and evaluated improvements over the base model. This project strengthened my understanding of model reliability and PEFT methods for efficient fine‑tuning.
+              Fine-tuned a GPT-2 classifier using LoRA to detect whether AI-generated responses were hallucinated or factual. 
+              Trained on the HaluEval dataset and improved classification accuracy from ~12% to 62%, demonstrating the impact of parameter-efficient fine-tuning on model reliability.
             </p>
           </article>
 
@@ -124,7 +129,9 @@
             <h3>LLM Benchmarking for Rare Disease Diagnosis</h3>
             <p class="card-meta">GPT‑4o · GitHub Models · AI × Healthcare</p>
             <p>
-              Designed an evaluation framework to test whether LLM diagnostic accuracy changes across disease rarity tiers. This work explores how LLMs reason about rare conditions, where data scarcity and clinical ambiguity make diagnosis challenging. The goal is to understand model limitations and identify opportunities for safer, more reliable AI‑assisted clinical reasoning.
+              Designed an evaluation framework to test whether LLM diagnostic accuracy changes across disease rarity tiers. 
+              This work explores how LLMs reason about rare conditions, where data scarcity and clinical ambiguity make diagnosis challenging. 
+              The goal is to understand model limitations and identify opportunities for safer, more reliable AI‑assisted clinical reasoning.
             </p>
           </article>
 
@@ -133,7 +140,7 @@
             <h3>EEG Data Analysis</h3>
             <p class="card-meta">Python · Data Visualization</p>
             <p>
-              Analyzed EEG datasets as part of a professor‑guided project. Cleaned and processed raw brain‑signal data, visualized patterns, and explored challenges in biomedical signal interpretation. This experience strengthened my analytical skills and exposed me to the complexity of real‑world healthcare data.
+              Analyzed EEG datasets as part of a professor‑guided project. Cleaned and processed raw brain‑signal data, visualized patterns, and explored challenges in biomedical signal interpretation.
             </p>
           </article>
         </div>
@@ -146,11 +153,21 @@
         <div class="section-header">
           <h2>Projects</h2>
           <p class="section-subtitle">
-            Selected work that reflects how I think and build.
+            Attached display of my work
           </p>
         </div>
 
         <div class="cards">
+
+          <!-- Notebook Embed -->
+          <iframe 
+            src="https://nbviewer.org/github/sharlerx/sharlerx.github.io/blob/main/my_notebook.ipynb"
+            width="100%" 
+            height="800px"
+            style="border: none; border-radius: 12px;">
+          </iframe>
+
+          <!-- Project Card -->
           <article class="card">
             <p class="card-label">Project</p>
             <h3>Hallucination Detection with LoRA‑Fine‑Tuned GPT‑2</h3>
@@ -163,23 +180,6 @@
             </p>
           </article>
 
-          <article class="card">
-            <p class="card-label">Project</p>
-            <h3>LLM Diagnostic Benchmarking for Rare Diseases</h3>
-            <p class="card-meta">GPT‑4o · GitHub Models</p>
-            <p>
-              Evaluated whether LLM diagnostic accuracy varies across disease rarity tiers. This project highlights gaps in LLM clinical reasoning and explores how AI systems handle rare conditions.
-            </p>
-          </article>
-
-          <article class="card">
-            <p class="card-label">Project</p>
-            <h3>EEG Data Analysis</h3>
-            <p class="card-meta">Python · Data Visualization</p>
-            <p>
-              Processed and visualized EEG signals to identify patterns and understand noise, artifacts, and signal structure. Gained experience with biomedical data and exploratory analysis techniques.
-            </p>
-          </article>
         </div>
       </div>
     </section>
